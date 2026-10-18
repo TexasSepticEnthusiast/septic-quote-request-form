@@ -1,12 +1,7 @@
 {
-  "recipient_email": "outwestseptic@gmail.com",
   "submit_mode": "mailto",
+  "recipient_email": "sales@outwestseptic.com",
   "webhook_url": "",
-  "phone": "940.452.0598",
-  "license": "TCEQ OSSF Installer I, OS0041298",
-  "service_area": {
-    "counties": ["Palo Pinto", "Hood", "Erath", "Stephens", "Young", "Jack", "Eastland"],
-    "towns": ["Mineral Wells", "Graford", "Possum Kingdom Lake", "Eastland"],
-    "excluded": ["Parker", "Tarrant"]
-  }
+  "contact_source": "https://outwestseptic.com/",
+  "contact_checked_on": "2026-10-18"
 }

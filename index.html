@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Request a quote — Out West Septic</title>
-  <meta name="description" content="Request a quote for a conventional septic system, drainfield, perc test, site evaluation, or repair in Palo Pinto, Hood, Erath, Stephens, Young, Jack, or Eastland County, TX." />
+  <meta name="description" content="Prepare an Out West Septic quote inquiry for a property in Palo Pinto County or nearby priority areas. Confirm location and service availability directly." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%238B2E2E'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23F4E9D8'%3EOW%3C/text%3E%3C/svg%3E" />
 </head>
@@ -15,7 +15,7 @@
         <span class="brand-mark">OW</span>
         <span class="brand-text">
           <strong>Out West Septic</strong>
-          <span class="brand-sub">Lone Camp, TX &middot; TCEQ OSSF Installer I &middot; OS0041298</span>
+          <span class="brand-sub">Property and project inquiries</span>
         </span>
       </div>
       <div class="header-cta">
@@ -29,33 +29,34 @@
       <div class="container">
         <h1>Request a quote</h1>
         <p class="lede">
-          Tell us about the property and the work. We serve Palo Pinto, Hood, Erath, Stephens, Young, Jack, and Eastland counties. Conventional gravity systems only. We do not run a pump truck (we'll refer you to a pumper if needed).
+          Describe your property and the work you need. The listed counties are priority areas; Out West Septic must confirm the actual location and service availability.
         </p>
         <p class="lede faint">
-          Parker and Tarrant counties are outside our service area.
+          Parker and Tarrant counties are outside this form's target area.
         </p>
       </div>
     </section>
 
     <section class="form-section">
       <div class="container">
-        <form id="quote-form" novalidate>
+        <noscript>This form needs JavaScript. Use the official contact link below.</noscript>
+        <form id="quote-form" method="post" novalidate>
           <fieldset>
             <legend>Your contact info</legend>
 
             <div class="field">
               <label for="name">Your name</label>
-              <input id="name" name="name" type="text" required autocomplete="name" />
+              <input id="name" maxlength="120" name="name" type="text" required autocomplete="name" />
             </div>
 
             <div class="row">
               <div class="field">
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="940-555-0123" />
+                <input id="phone" maxlength="60" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="940-555-0123" />
               </div>
               <div class="field">
                 <label for="email">Email <span class="optional">(optional)</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" />
+                <input id="email" maxlength="254" name="email" type="email" autocomplete="email" inputmode="email" />
               </div>
             </div>
           </fieldset>
@@ -65,7 +66,7 @@
 
             <div class="field">
               <label for="address">Property address or directions</label>
-              <textarea id="address" name="address" required rows="3" placeholder="Street address, gate code, or directions from a nearby landmark. Subdivision and lot/block if you have it."></textarea>
+              <textarea id="address" maxlength="1200" name="address" required rows="3" placeholder="Property address or nearby landmark. Do not include gate codes, passwords, or other access credentials."></textarea>
             </div>
 
             <div class="row">
@@ -84,7 +85,7 @@
               </div>
               <div class="field">
                 <label for="parcel">Parcel ID <span class="optional">(if known)</span></label>
-                <input id="parcel" name="parcel" type="text" />
+                <input id="parcel" maxlength="120" name="parcel" type="text" />
               </div>
             </div>
           </fieldset>
@@ -93,12 +94,11 @@
             <legend>The work</legend>
 
             <div class="field">
-              <span class="label-like">Service needed</span>
+              <span class="label-like">Service topic (choose at least one; availability is confirmed separately)</span>
               <div class="checkbox-grid">
                 <label class="check"><input type="checkbox" name="service" value="New conventional system" /> New conventional system</label>
                 <label class="check"><input type="checkbox" name="service" value="Drainfield install" /> Drainfield install</label>
-                <label class="check"><input type="checkbox" name="service" value="Perc test" /> Perc test</label>
-                <label class="check"><input type="checkbox" name="service" value="Site evaluation" /> Site evaluation</label>
+                <label class="check"><input type="checkbox" name="service" value="Soil/site evaluation" /> Soil/site evaluation</label>
                 <label class="check"><input type="checkbox" name="service" value="Septic repair" /> Septic repair</label>
                 <label class="check"><input type="checkbox" name="service" value="Inspection" /> Inspection</label>
                 <label class="check"><input type="checkbox" name="service" value="Tank lid riser" /> Tank lid riser</label>
@@ -120,23 +120,32 @@
 
             <div class="field">
               <label for="bedrooms">Number of bedrooms <span class="optional">(for new systems)</span></label>
-              <input id="bedrooms" name="bedrooms" type="number" min="1" max="10" />
+              <input id="bedrooms" name="bedrooms" type="number" min="1" max="10" step="1" />
             </div>
 
             <div class="field">
               <label for="notes">Notes</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Slope, rock, access, water well distance, anything else that helps us scope the site visit."></textarea>
+              <textarea id="notes" maxlength="5000" name="notes" rows="4" placeholder="Slope, rock, access, water well distance, anything else that helps us scope the site visit."></textarea>
             </div>
           </fieldset>
 
           <div class="actions">
-            <button type="submit" class="primary">Send request</button>
+            <button type="submit" class="primary" disabled>Loading delivery settings...</button>
             <p class="faint small">
-              By submitting, you agree we may contact you about this request. We do not share your info.
+              Include only information needed for this inquiry. This page does not save your details; email or form-service providers handle information you choose to send.
             </p>
           </div>
 
+          <p id="delivery-note" class="small"></p>
           <div id="status" class="status" role="status" aria-live="polite"></div>
+          <section id="draft-preview" hidden aria-label="Email draft preview">
+            <h2>Review your draft</h2>
+            <p>Recipient: <strong id="draft-recipient"></strong></p>
+            <label for="draft-text">Copyable request text</label>
+            <textarea id="draft-text" readonly rows="14"></textarea>
+            <p><a id="open-draft">Open email draft</a></p>
+            <p class="small">If your email app does not open, copy the text and recipient into a new message. This page cannot confirm delivery.</p>
+          </section>
         </form>
       </div>
     </section>
@@ -145,13 +154,12 @@
       <div class="container">
         <h2>What happens next</h2>
         <ol>
-          <li>You send the form. We get a copy in our inbox.</li>
-          <li>We call you back within one business day to confirm the scope.</li>
-          <li>If the property is in our service area, we schedule a free site visit.</li>
-          <li>After the visit, you get a written quote with line items and the TCEQ references.</li>
+          <li>Review the destination and your request details.</li>
+          <li>For an email draft, send it yourself from your email app. Preparing a draft does not deliver a request.</li>
+          <li>Confirm the property location, service scope, and any visit or pricing arrangements directly with Out West Septic.</li>
         </ol>
         <p>
-          Service area: Palo Pinto County, Mineral Wells, Graford, Possum Kingdom Lake, Hood County, Erath County, Stephens County, Young County, Jack County, and Eastland County. Parker and Tarrant counties are outside our area.
+          Priority areas and contact details: <a href="https://outwestseptic.com/">Out West Septic official website</a>, checked October 18, 2026. A county selection is not a service guarantee.
         </p>
       </div>
     </section>
@@ -161,8 +169,7 @@
     <div class="container">
       <p>
         <strong>Out West Septic</strong> &middot; outwestseptic.com &middot; <a href="tel:9404520598">940.452.0598</a><br />
-        TCEQ OSSF Installer I, OS0041298 &middot; Lone Camp, TX<br />
-        Serving Palo Pinto, Hood, Erath, Stephens, Young, Jack, and Eastland counties plus Mineral Wells, Graford, Possum Kingdom Lake, and Eastland.
+        <a href="https://outwestseptic.com/">Confirm current services and contact details</a>.
       </p>
     </div>
   </footer>

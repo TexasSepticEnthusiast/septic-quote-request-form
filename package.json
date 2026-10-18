@@ -1,0 +1,11 @@
+{
+  "name": "septic-quote-request-form",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/unit.test.cjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}

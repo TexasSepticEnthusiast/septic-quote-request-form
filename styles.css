@@ -217,3 +217,7 @@ button.primary:disabled { opacity: 0.6; cursor: wait; }
 }
 
 .site-footer a { color: var(--brand-bg); }
+
+[hidden] { display: none !important; }
+#draft-preview { margin: 1.5rem 0; }
+#draft-text { width: 100%; font: inherit; padding: .75rem; }
